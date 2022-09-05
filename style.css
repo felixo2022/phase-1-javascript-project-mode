@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: blue;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1569429512518-44dad00e88db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
+}
+
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input.search-bar {
+    margin: 0.6em;
+    border: none;
+    height: 2em;
+    width: 15.5em;
+    border-radius: 18px;
+    font-size: 120%;
+    font-style: normal;
+}
+
+button {
+    height: 2.5em;
+    width: 2.5em;
+    outline: none;
+    shape-outside: padding-box;
+    border-radius: 15PX;
+}
