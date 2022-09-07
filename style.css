@@ -40,3 +40,15 @@ button {
     shape-outside: padding-box;
     border-radius: 15PX;
 }
+
+
+.weather.loading {
+    visibility: hidden;
+
+
+}
+.weather.loading::after {
+visibility: visible;
+content: "loading...";
+color: rgba(1, 1, 34, 0.918);
+}
