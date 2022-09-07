@@ -1,6 +1,6 @@
 let weather = {
-    apiKey: "?lat=35.7796&lon=-78.6382&key002b495ba8404384b359ebc412bf4113",
-    getWeather: function ( lat, lon ) {
+    apiKey: "002b495ba8404384b359ebc412bf4113",
+    getWeather: function (city) {
       get(
         "https://api.weatherbit.io/v2.0/current" +
           city +
