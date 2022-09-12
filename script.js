@@ -1,17 +1,21 @@
 let weather = {
-    apiKey: "002b495ba8404384b359ebc412bf4113",
-    getWeather: function (city) {
-      get(
-        "https://api.weatherbit.io/v2.0/current" +
-          city +
-          "&units=metric&appid=" +
-          this.apiKey
-      )
+    apiKey: "e89b90c9b992fec8c9378500c0e7b870",
+    
+      fetchWeather: function (city){
+        fetch("http://api.openweathermap.org/geo/1.0/direct?q=Nairobi&limit=5&appid=e89b90c9b992fec8c9378500c0e7b870")
+        + city
+        + "&units=metric&appid="
+        + this.appkey;
+
+      
+      }
+
+      
         .then((response) => response.json())
-        .then((data) => this.displayWeather(data));
-    },
-    displayWeather: function( data ) {
-      const { name } = data;
+        .then((data) => console.log(data))
+    }
+    displayWeather: function(data) {
+      const { name } = data,
       const { icon, description } = data.weather[0];
       const { temp, humidity } = data.main;
       const { speed } = data.wind;
@@ -26,11 +30,11 @@ let weather = {
         "Wind speed: " + speed + " km/h";
       document.querySelector(".weather").classList.remove("loading");
      
-    },
+    }
     search: function () {
       this.getWeather(document.querySelector(".search-bar").value);
-    },
-  };
+    }
+  ;
   
   document.querySelector(".search button").addEventListener("click", function () {
     weather.search();
